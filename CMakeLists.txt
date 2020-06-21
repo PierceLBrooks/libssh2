@@ -37,7 +37,7 @@ cmake_minimum_required(VERSION 2.8.11)
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-project(libssh2 C)
+project(libssh2)
 set(PROJECT_URL "https://www.libssh2.org/")
 set(PROJECT_DESCRIPTION "The SSH library")
 
@@ -88,15 +88,15 @@ include(FeatureSummary)
 add_subdirectory(src)
 
 option(BUILD_EXAMPLES "Build libssh2 examples" ON)
-if(BUILD_EXAMPLES)
-  add_subdirectory(example)
-endif()
+#if(BUILD_EXAMPLES)
+#  add_subdirectory(example)
+#endif()
 
 option(BUILD_TESTING "Build libssh2 test suite" ON)
-if(BUILD_TESTING)
-  enable_testing()
-  add_subdirectory(tests)
-endif()
+#if(BUILD_TESTING)
+#  enable_testing()
+#  add_subdirectory(tests)
+#endif()
 
 add_subdirectory(docs)
 
